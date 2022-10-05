@@ -1,7 +1,6 @@
 # Label-Aware Semantic Role Labeling (SRL)
 
-This repository contains resources for the paper ["Label Definitions Improve Semantic Role Labeling"](https://aclanthology.org/2022.naacl-main.411.pdf) appearing in NAACL 2022 . The resources are going through and internal review process and will be visible soon. We thank you for your patience. 
-
+This repository contains resources for the paper ["Label Definitions Improve Semantic Role Labeling"](https://aclanthology.org/2022.naacl-main.411.pdf) appearing in NAACL 2022 .
 
 ## Requirements
 - Python 3.6.13
@@ -9,6 +8,8 @@ This repository contains resources for the paper ["Label Definitions Improve Sem
 - HuggingFace Transformers 4.6.1
 - HuggingFace Datasets 1.8.0
 - ScikitLearn 0.24.2
+- Download CoNLL09 scorer from https://ufal.mff.cuni.cz/conll2009-st/eval09.pl and place it in the main repository.
+- Download CoNLL09 English subset of the data from LDC https://catalog.ldc.upenn.edu/LDC2012T04 and place in the `/data` directory.
 
 ## Overview
 Semantic Role Labeling (SRL), with the predicate known a priori, typically consists of two tasks: predicate sense disambiguation (WSD) and argument classification (AC). Most existing work and the previous state-of-the-art method tackled these two tasks separately, without interaction. In this work we focus on AC, which is argubaly the more important task for SRL. All existing work, AFAWK, performed argument classification in a label-blind manner. Namely, the model is tasked to classify tokens into argument labels such as A0, A1, AM-TMP, without any knowledge of what these means. Indeed, the these semantic roles or arguments were carefully defined by linguists, and those definitions are readily available in standard datasets. For example, for the predicate "work", A0 is the _worker_, A1 is the _job_, and A2 is the _employer_.
