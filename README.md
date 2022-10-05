@@ -67,7 +67,7 @@ This produces a `.acd.tsv` file for each split, for both the full and purged dat
 
 > python build_data_portions.py
 
-- Look for few shot data at `SRL_PNMA/huggingface/data/conll09/en/few_shot`
+- Look for few shot data at `data/conll09/en/few_shot`
 
 
 
